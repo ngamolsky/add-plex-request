@@ -1,8 +1,13 @@
 name = "add-plex-request"
-main = "src/index.ts"
-compatibility_date = "2023-10-17"
+main = "src/worker.ts"
+compatibility_date = "2023-10-10"
 usage_model = "bundled"
 env = { }
 
 [triggers]
 crons = [ ]
+
+[vars]
+NOTION_PLEX_REQUEST_DATABASE_ID = "e5296ba6f21845cf85201c96e50bddb9"
+SENDGRID_FROM_EMAIL = "nikitabot@gamolsky.net"
+SENDGRID_TO_EMAIL = "plexrequest@gamolsky.net"
