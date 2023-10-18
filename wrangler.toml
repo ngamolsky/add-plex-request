@@ -11,3 +11,7 @@ crons = [ ]
 NOTION_PLEX_REQUEST_DATABASE_ID = "e5296ba6f21845cf85201c96e50bddb9"
 SENDGRID_FROM_EMAIL = "nikitabot@gamolsky.net"
 SENDGRID_TO_EMAIL = "plexrequest@gamolsky.net"
+
+routes = [
+	{ pattern = "api.gamolsky.net", custom_domain = true }
+]
