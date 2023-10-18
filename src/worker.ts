@@ -62,7 +62,15 @@ async function fetch(request: Request, env: Env) {
 	const databaseId = env.NOTION_PLEX_REQUEST_DATABASE_ID;
 	const correctPassword = env.PLEX_PASSWORD;
 
-	if (method === 'POST') {
+	if (method === 'OPTIONS') {
+		return new Response(null, {
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+				'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+				'Access-Control-Allow-Headers': 'Content-Type',
+			},
+		});
+	} else if (method === 'POST') {
 		const body = (await request.json()) as { title: string; why: string; who: string; password: string };
 		const title = body.title;
 		const why = body.why;
