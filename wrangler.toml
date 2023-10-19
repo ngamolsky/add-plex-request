@@ -14,5 +14,4 @@ SENDGRID_TO_EMAIL = "plexrequest@gamolsky.net"
 
 routes = [
 	{ pattern = "api.gamolsky.net", custom_domain = true },
-	{ pattern = "api.gamolsky.net/path", zone_name = "gamolsky.net" }
 ]
