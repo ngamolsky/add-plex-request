@@ -3,6 +3,7 @@ main = "src/worker.ts"
 compatibility_date = "2023-10-10"
 usage_model = "bundled"
 env = { }
+workers_dev = false
 
 [triggers]
 crons = [ ]
@@ -17,4 +18,3 @@ routes = [
 ]
 
 
-workers_dev = false
